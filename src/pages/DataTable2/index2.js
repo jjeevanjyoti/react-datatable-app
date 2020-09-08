@@ -12,25 +12,18 @@ const DataTable2 = () => {
   const ITEMS_PER_PAGE = 10;
 
   const headers = [
-    { name: "ID#", field: "id", sortable: false },
     { name: "Name", field: "name", sortable: true },
     { name: "position", field: "position", sortable: true },
-    { name: "Email", field: "email", sortable: true },
-    { name: "Phone", field: "phone", sortable: false },
-    { name: "DOB", field: "dob", sortable: false },
-    { name: "Website", field: "url", sortable: true },
-    { name: "Company", field: "company", sortable: true },
-    { name: "Address", field: "address", sortable: true },
+    { name: "office", field: "office", sortable: true },
+    { name: "age", field: "age", sortable: false },
+    { name: "date", field: "date", sortable: false },
+    { name: "salary", field: "salary", sortable: true },
   ];
 
   useEffect(() => {
     const getData = () => {
-      fetch("https://dcoders-tutorial.herokuapp.com/mock/data?total=100")
-        .then((response) => response.json())
-        .then((json) => {
-          console.log(json);
-          setComments(json.users);
-        });
+      console.log(data.rows.length);
+      setComments(data.rows);
     };
     getData();
   }, []);

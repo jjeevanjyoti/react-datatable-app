@@ -4,9 +4,9 @@ export default class Tableswitch extends Component {
   render() {
     return (
       <div className="table_switch">
-        <Link to="/">Table with Library</Link>
+        <Link to="/">Datatable</Link>
         <br />
-        <Link to="/dynamic-table">Table without Library</Link>
+        <Link to="/datatable-custom">Custom Datatable</Link>
       </div>
     );
   }

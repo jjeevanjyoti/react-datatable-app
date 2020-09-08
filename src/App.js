@@ -5,6 +5,7 @@ import "./App.css";
 import Table1 from "./components/Table1";
 import Table2 from "./components/Table2";
 import Tableswitch from "./components/Tableswitch";
+import DataTbale from "./pages/DataTable2/index";
 function App() {
   return (
     <>
@@ -14,8 +15,8 @@ function App() {
           <Route exact path="/">
             <Table1 />
           </Route>
-          <Route exact path="/dynamic-table">
-            <Table2 />
+          <Route exact path="/datatable-custom">
+            <DataTbale />
           </Route>
         </Switch>
       </Router>

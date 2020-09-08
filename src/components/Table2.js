@@ -14,9 +14,12 @@ export default class Table2 extends Component {
     for (var i = 0; i < this.state.tableData.length; i++) {
       for (let key in this.state.tableData[i]) {
         if (
-          this.state.tableData[i][key].toLowerCase().indexOf(e.target.value) !=
-          -1
+          this.state.tableData[i][key]
+            .toLowerCase()
+            .indexOf(e.target.value.toLowerCase()) != -1
         ) {
+          console.log(this.state.tableData[i]);
+
           results.push(this.state.tableData[i]);
         }
       }

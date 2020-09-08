@@ -31,12 +31,17 @@ const DataTable2 = () => {
   const commentsData = useMemo(() => {
     let computedComments = comments;
 
-    if (search) {
+    if (search.toLowerCase()) {
       computedComments = computedComments.filter(
         (comment) =>
           comment.name.toLowerCase().includes(search.toLowerCase()) ||
-          comment.email.toLowerCase().includes(search.toLowerCase())
+          comment.position.toLowerCase().includes(search.toLowerCase()) ||
+          comment.office.toLowerCase().includes(search.toLowerCase()) ||
+          comment.age.toLowerCase().includes(search.toLowerCase()) ||
+          comment.date.toLowerCase().includes(search.toLowerCase()) ||
+          comment.salary.toLowerCase().includes(search.toLowerCase())
       );
+      console.log(computedComments);
     }
 
     setTotalItems(computedComments.length);
@@ -56,7 +61,7 @@ const DataTable2 = () => {
     );
   }, [comments, currentPage, search, sorting]);
 
-  console.log(commentsData);
+  // console.log(commentsData);
   return (
     <>
       <div className="row w-100">

@@ -5,7 +5,9 @@ import "./App.css";
 import Table1 from "./components/Table1";
 import Table2 from "./components/Table2";
 import Tableswitch from "./components/Tableswitch";
-import DataTbale from "./pages/DataTable2/index";
+import DataTable from "./pages/DataTable2/index";
+import DataTable2 from "./pages/DataTable2/index2";
+
 function App() {
   return (
     <>
@@ -16,7 +18,7 @@ function App() {
             <Table1 />
           </Route>
           <Route exact path="/datatable-custom">
-            <DataTbale />
+            <DataTable2 />
           </Route>
         </Switch>
       </Router>

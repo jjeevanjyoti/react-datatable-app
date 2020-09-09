@@ -2,11 +2,9 @@ import React from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-import Table1 from "./components/Table1";
-import Table2 from "./components/Table2";
+import Table from "./components/Table";
 import Tableswitch from "./components/Tableswitch";
-import DataTable from "./pages/DataTable2/index";
-import DataTable2 from "./pages/DataTable2/index2";
+import DataTable from "./pages/DataTable/index";
 
 function App() {
   return (
@@ -15,10 +13,10 @@ function App() {
         <Tableswitch />
         <Switch>
           <Route exact path="/">
-            <Table1 />
+            <Table />
           </Route>
           <Route exact path="/datatable-custom">
-            <DataTable2 />
+            <DataTable />
           </Route>
         </Switch>
       </Router>
